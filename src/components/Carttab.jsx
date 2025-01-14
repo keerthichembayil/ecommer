@@ -6,22 +6,26 @@ import Cartitem from './Cartitem';
 
 const Carttab = () => {
   const carts=useSelector(store=>store.cart.items);
-  console.log(carts);
-  // const [totalPrice, setTotalPrice] = useState(0);
-  // useEffect(() => {
-  //   const total = carts.reduce((sum, cartitem) => {
-  //     const priceItem = products.find((price) => price.productid === cartitem.productid);
-  //     return sum + (priceItem ? priceItem.price * cartitem.quantity : 0);
-  //   }, 0);
+  
+  const[totalprice,setTotalprice]=useState(0);
+  useEffect(() => {
+    const total=carts.reduce((sum,cartitem)=>{
+      const product=products.find((p)=>p.id===cartitem.productid);
+      console.log(product);
+      return sum+(product?product.price*cartitem.quantity:0);
+    },0);
+    console.log(carts);
+    setTotalprice(total);
+   
+  }, [carts])
+  
 
-  //   setTotalPrice(total);
-  // }, [carts])
   
   return (
 
-    <div>
-      
     <div className='grid gap-5 bg-gradient-to-r from-purple-500 to-pink-500'>
+      
+    <div >
       {
         carts.map((item,key)=>
         <Cartitem key={key} data={item}/>
@@ -30,10 +34,15 @@ const Carttab = () => {
 
     
       
-      <button className='bg-purple-600 text-white font-semibold py-2 px-4 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 transition duration-150 ease-in-out'>checkout</button>
       
       
     </div>
+
+    <div className='flex justify-center items-center bg-slate-400'>
+      <p className='bg-blue-400 text-white font-bold'>Totalprice:${totalprice}</p>
+    <button className='bg-blue-700 p-4 rounded-md text-white font-extrabold'>Buy Now</button>
+    </div>
+    
     </div>  
     
   )

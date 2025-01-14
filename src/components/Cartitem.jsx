@@ -11,6 +11,11 @@ const Cartitem = (props) => {
     const dispatch=useDispatch();
     useEffect(() => {
      const finddetail=products.filter(product=>product.id===productid)[0];
+     console.log(finddetail);
+     console.log("called");   //that means this useeffect when add new product only + and - when pressed
+    //  we need not need that price again ie product id do not get change quantityy only changes when + and - click 
+    //  clciked
+     
 
 //      The filter() method returns an array of all elements in products that satisfy the condition product.id === productid.
 // Even if only one element matches, filter() still returns an array with that single matching element.

@@ -9,6 +9,7 @@ const Header = ({setSearchTerm}) => {
   
   const carts=useSelector(store=>store.cart.items);
   
+  
   useEffect(() => {
     let total=0;
     carts.forEach((item)=>{
