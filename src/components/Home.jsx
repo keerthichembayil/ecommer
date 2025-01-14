@@ -4,14 +4,34 @@ import {products} from '../products'
 import Product from './Product'
 import myimage from '../assets/images/landingpage.avif'
 const Home = ({searchterm}) => {
+  const [category, setCategory] = useState('All');
+  const categories = ['All', ...new Set(products.map((product) => product.category))];
   
-  const filteredProducts = products.filter((product) =>
-    product.name.toLowerCase().includes(searchterm.toLowerCase())
-  );
+  const filteredProducts = products.filter((product) =>{
+    const matchesSearch = product.name.toLowerCase().includes(searchterm.toLowerCase());
+    const matchesCategory = category === 'All' || product.category === category;
+    return matchesSearch && matchesCategory;
+
+});
   const displayedproducts=filteredProducts.length>0?filteredProducts:products;
   return (
     <>
+
+<div className="my-5">
+        <select
+          value={category}
+          onChange={(e) => setCategory(e.target.value)}
+          className="px-4 py-2 border rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+        >
+          {categories.map((cat) => (
+            <option key={cat} value={cat}>
+              {cat}
+            </option>
+          ))}
+        </select>
+      </div>
     <div>
+
       <div className='grid lg:grid-cols-6 md:grid-cols-6 sm:grid-cols-2 gap-5 py-10'>
         <img src={myimage} className='lg:col-span-3 md:col-span-3 sm:col-span-2 rounded-lg shadow-md'/>
         <div className="lg:col-span-3 md:col-span-3 sm:col-span-2 flex flex-col justify-center text-center lg:text-left space-y-4">

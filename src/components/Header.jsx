@@ -23,7 +23,7 @@ const Header = ({setSearchTerm}) => {
   return (
     <div>
 <header className='flex justify-between items-center mb-5 bg-gray-500 mt-2 px-5 py-6'>
-      <NavLink to="/" className='text-xl font-semibold'>HOME</NavLink>
+      <NavLink to="/" className='text-xl font-semibold text-white'>HOME</NavLink>
       <input
         type="text"
         placeholder="Search products..."

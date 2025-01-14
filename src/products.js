@@ -17,7 +17,7 @@ export const products=[
         image:image1,
         description:"description1",
         
-        slug:"polo-brandbag"
+        category:"Bag"
       },
       {
         id:2,
@@ -28,7 +28,7 @@ export const products=[
         image:image2,
         description:"description2",
         
-        slug:"cavlin-bag"
+        category:"Bag"
       }
       ,
       {
@@ -36,11 +36,11 @@ export const products=[
           name:"Fashionbrandbag",
           price:1100,
           
-          category:"bag",
+          
           image:image3,
           description:"description3",
         
-          slug:"fashionbrand-bag"
+          category:"Bag"
         },
       
       {
@@ -48,12 +48,13 @@ export const products=[
         name:"visudhbedcover",
         price:1900,
         
-        category:"bedcover",
+       
         
         image:image4,
         description:"description4",
+        category:"Bedcover"
         
-        slug:"visudh-bedcover"
+      
       },
   
       {
@@ -64,8 +65,7 @@ export const products=[
           category:"bedcover",
           image:image5,
           description:"description5",
-          
-          slug:"fashor-bedcover"
+           category:"Bedcover"
         },
         {
           id:6,
@@ -75,7 +75,7 @@ export const products=[
           image:image6,
           description:"description6",
           
-          slug:"nihara-bedcover"
+           category:"Bedcover"
         },
 
         {
@@ -83,11 +83,11 @@ export const products=[
         name:"OmpalaDinnerset",
           price:1546,
           
-          category:"dinnerset",
+         
           image:image7,
           description:"description7",
           
-          slug:"ompala-dinnerset"
+          category:"Dinnerset",
           
   
         },
@@ -96,11 +96,11 @@ export const products=[
           name:"Carlodinneset",
           price:1089,
           
-          category:"dinnerset",
+          
           image:image8,
           description:"description8",
           
-          slug:"carlod-dinnerset"
+          category:"Dinnerset",
         }
         
    
