@@ -1,3 +1,11 @@
+import image1 from './assets/images/bag1.avif'
+import image2 from './assets/images/bag2.avif'
+import image3 from './assets/images/bag3.avif'
+import image4 from './assets/images/bedcover1.avif'
+import image5 from './assets/images/bedcover2.avif'
+import image6 from './assets/images/bedcover3.avif'
+import image7 from  './assets/images/dinnerset1.avif'
+import image8 from './assets/images/dinnerset2.avif'
 export const products=[
 
     {
@@ -6,7 +14,7 @@ export const products=[
         price:2000,
         
         
-        image:"src/assets/images/bag1.avif",
+        image:image1,
         description:"description1",
         
         slug:"polo-brandbag"
@@ -17,7 +25,7 @@ export const products=[
         price:1300,
         
         
-        image:"src/assets/images/bag2.avif",
+        image:image2,
         description:"description2",
         
         slug:"cavlin-bag"
@@ -29,7 +37,7 @@ export const products=[
           price:1100,
           
           category:"bag",
-          image:"src/assets/images/bag3.avif",
+          image:image3,
           description:"description3",
         
           slug:"fashionbrand-bag"
@@ -42,7 +50,7 @@ export const products=[
         
         category:"bedcover",
         
-        image:"src/assets/images/bedcover1.avif",
+        image:image4,
         description:"description4",
         
         slug:"visudh-bedcover"
@@ -54,7 +62,7 @@ export const products=[
           price:1456,
           
           category:"bedcover",
-          image:"src/assets/images/bedcover2.avif",
+          image:image5,
           description:"description5",
           
           slug:"fashor-bedcover"
@@ -64,7 +72,7 @@ export const products=[
           name:"Niharabedcover",
           price:1890,
           category:"bedcover",
-          image:"src/assets/images/bedcover3.avif",
+          image:image6,
           description:"description6",
           
           slug:"nihara-bedcover"
@@ -76,7 +84,7 @@ export const products=[
           price:1546,
           
           category:"dinnerset",
-          image:"src/assets/images/dinnerset1.avif",
+          image:image7,
           description:"description7",
           
           slug:"ompala-dinnerset"
@@ -89,7 +97,7 @@ export const products=[
           price:1089,
           
           category:"dinnerset",
-          image:"src/assets/images/dinnerset2.avif",
+          image:image8,
           description:"description8",
           
           slug:"carlod-dinnerset"
