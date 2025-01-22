@@ -8,16 +8,24 @@ const Header = ({setSearchTerm}) => {
   const[totalQuantity,setTotalQuantity]=useState(0);
   
   const carts=useSelector(store=>store.cart.items);
+  console.log("carts here",carts);
   
   
   useEffect(() => {
+    if(carts.length===0)
+    {
+      setTotalQuantity(0);
+    }
+    else{
     let total=0;
     carts.forEach((item)=>{
       total=total+item.quantity;
-      setTotalQuantity(total);
+      
+      console.log('total here',total);
 
     })
-  
+    setTotalQuantity(total);
+    }
    
   }, [carts])
   
